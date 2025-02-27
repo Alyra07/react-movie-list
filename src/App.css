@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAFCF9;
+  /* background popcorn image */
+  background: url('/img/popcorn-fop.png') no-repeat;
+  background-size: 600px 600px; /* width height */
+  background-position: 100px 75px; /* x y position */
+}
+
+/* MovieList & Watchlist CSS -> Movie Table */
+
+.movie-table th {
+  padding: 12px;
+  margin: auto;
+  text-align: left;
+  background-color: #13284B;
+  color: white;
+  font-weight: normal;
+}
+
+/* Single Movie titles in movieList */
+.movie-table td {
+  background-color: #13284bec;
+  color: white;
+  border: 1px solid #13284B;
+  text-align: left;
+  padding: 12px;
+}
+
+.movie-table .movie-title {
+  max-width: 100%;
+  font-weight: bolder;
+}
+
+.movie-table tr:hover {
+  background-color: #13284B;
+}
+
+/* don't show movie.poster in table on small screens */
+@media screen and (max-width: 600px) {
+  .movie-table {
+    margin: 0;
+    border: 0;
+  }
+
+  .movie-poster {
+    display: none;
+  }  
+}
